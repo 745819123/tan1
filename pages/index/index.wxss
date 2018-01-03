@@ -1,0 +1,369 @@
+/* 基础样式 */
+
+view, scroll-view, swiper, swiper-item, icon, text, progress, button,
+checkbox-group, checkbox, form, input, label, picker, radio-group, radio, slider,
+switch, action-sheet, action-sheet-item, action-sheet-cancel, modal, toast,
+loading, navigator, audio, image, video, map, canvas {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+page {
+  height: 100%;
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+}
+
+checkbox-group, radio-group {
+  display: block;
+}
+
+:before, :after, ::before, ::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.c-minheight {
+  min-height: 80px;
+}
+
+.c-full {
+  width: 100%;
+  height: 100%;
+}
+
+.c-block {
+  display: block;
+}
+
+.c-autosize {
+  width: auto;
+  height: auto;
+}
+
+.c-fullwidth {
+  width: 100%;
+}
+
+.c-fullheight {
+  height: 100%;
+}
+
+.c-initHide {
+  opacity: 0 !important;
+}
+
+.c-ellipse {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* 自定义样式 */
+
+.body_i1CpAb {
+  text-align: center;
+}
+
+.show_btn {
+  margin-top: 20px;
+}
+
+.my_button {
+  width: 30%;
+  line-height: 50rpx;
+  padding: 5rpx 10rpx 5rpx 10rpx;
+  border-radius: 10rpx;
+  background-color: #00b2d7;
+  text-align: center;
+  color: white;
+}
+
+.btn {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	padding: 25px 80px;
+	display: inline-block;
+	margin: 15px 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+/* Pseudo elements for icons */
+.btn:before {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	position: relative;
+	-webkit-font-smoothing: antialiased;
+}
+
+.btn-8 {
+	display: block;
+	background: #5cbcf6;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.btn-8:active {
+	background: #55b7f3;
+}
+
+.box1 {
+  margin-right: auto;
+}
+
+.wx-view_fbCXor {
+  height: 100%;
+}
+
+.res_box1 {
+  width: 80px;
+}
+
+.res_box2 {
+  width: 180px;
+}
+
+.res_box3 {
+  width: 30px;
+}
+
+.block {
+  height: 20px;
+  width: 100%;
+}
+
+.reset_btn {
+  margin-left: 20px;
+}
+
+.radio-group {
+  width: 100%;
+  margin-left: auto;
+  align-self: center;
+  flex: 0 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weui-msg__icon-area {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 36px;
+  margin-bottom: 30px;
+}
+
+.weui-msg__text-area {
+  display: block;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+.weui-msg__title {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.weui-msg__desc {
+  font-size: 14px;
+  color: rgb(153, 153, 153);
+  -webkit-line-clamp: 1;
+}
+
+.weui-msg__opr-area {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.weui-btn_default {
+  margin-top: 15px;
+}
+
+.weui-msg__extra-area {
+  position: fixed;
+  width: 100%;
+  bottom: 15px;
+}
+
+.weui-footer {
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+}
+
+.weui-footer__links {
+  font-size: 13px;
+}
+
+.weui-footer__text {
+  font-size: 12px;
+}
+
+.wx-text_lXMWEC {
+  text-align: center;
+}
+
+.wx-text_c08aqS {
+  text-align: center;
+  -webkit-line-clamp: 5;
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.wx-view_0BtJgQ {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  min-width: 0px;
+  float: none;
+  overflow: visible;
+  position: static;
+  margin-top: -44px;
+}
+
+.weui-radio-label_C4mZKL {
+  width: 50%;
+  margin-left: auto;
+  align-self: center;
+  flex: 0 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wx-text_iHhiJH {
+  display: inline-block;
+  font-size: 16px;
+  padding-left: 9px;
+}
+
+.wx-view_CYobSp {
+  margin: 0px auto auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  display: inline-block;
+  min-height: 30px;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.wx-view_7YsrZs {
+  display: flex;
+  align-items: center;
+  padding: 5px 30px;
+  height: 30px;
+  min-height: 20px;
+  justify-content: flex-start;
+  padding-left: 30px;
+}
+
+.wx-input_S7xtkk {
+  width: 60%;
+  /* margin-left: 30px; *//* margin-right: 11px; *//* padding-right: 0px; */
+  border: 1px #999 solid;
+  border-radius: 3px;
+  text-align: left;
+}
+
+.wx-text_puTHpH {
+  margin-left: 11px;
+  /* margin-right: auto; */
+  display: flex;
+  font-size: 13px;
+  text-align: center;
+  align-self: center;
+  justify-content: flex-start;
+  position: static;
+}
+
+.wx-button_LgQc5R {
+  display: block;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 0px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  position: absolute;
+}
+
+.wx-button_fkxn3k {
+  margin-top: 37px;
+  background-color: #00b2d7;
+}
+
+.wx-view_9cGvp4 {
+  display: block;
+  border-width: 1px;
+  border-style: dashed;
+  box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+  border-radius: 3px;
+  height: auto;
+  min-height: 100px;
+  margin-top: 15px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.wx-view_7YsrZs.c-state1 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.wx-view_90eM4X {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-width: 1px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-style: dotted;
+  border-radius: 4px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+page {
+  text-align: center;
+}

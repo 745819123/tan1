@@ -1,0 +1,81 @@
+<view class="c-minheight wx-view_YLymeO" data-c_e_id="wx_view_dfd34001">
+  <text class="c-block wx-text_c08aqS" data-c_e_id="wx_text_5ccbd09f">贷款计算器</text>
+</view>
+<view class="c-minheight wx-view_0BtJgQ" data-c_e_id="wx_view_610e30d5" height="20rpx">
+  <radio-group class="radio-group c-block" bindchange="radioChange">
+    <label class="radio weui-radio-label_C4mZKL" data-c_e_id="weui_radio_label_22a63949" id="radio">
+        <radio checked="True" class="wx-radio_0Ixppk" name="type1" type="radio" value="1" checked="true"/>
+        <text class="radio-text wx-text_iHhiJH" data-c_e_id="wx_text_1c66fbfc">等额本息</text>
+    </label>
+    <label class="radio weui-radio-label_C4mZKL" data-c_e_id="weui_radio_labelecc3ac4c">
+        <radio class="wx-radio_0Ixppk" name="type1" type="radio" value="2"/>
+        <text class="radio-text wx-text_iHhiJH" data-c_e_id="wx_textaf326392">等额本金</text>
+    </label>
+  </radio-group>
+</view>
+<view class="c-minheight wx-view_7YsrZs" data-c_e_id="wx_view_c45d06b8">
+  <text class="c-block wx-text_puTHpH box1" data-c_e_id="wx_text_5e02605e">贷款金额：</text>
+  <input class="c-block c-fullwidth wx-input_S7xtkk" value="{{total_amount}}" type="digit" bindinput="bindinput_amount" />
+</view>
+<view class="c-minheight wx-view_7YsrZs" data-c_e_id="wx_view2e20da17">
+  <text class="c-block wx-text_puTHpH box1" data-c_e_id="wx_texte181fbbb">贷款期限(月)：</text>
+  <input class="c-block c-fullwidth wx-input_S7xtkk" value="{{term}}" type="number" bindinput="bindinput_term" />
+</view>
+<view class="c-minheight wx-view_7YsrZs" data-c_e_id="wx_viewc36353cc">
+  <text class="c-block wx-text_puTHpH box1" data-c_e_id="wx_text6adcc608">年利率(%)：</text>
+  <input class="c-block c-fullwidth wx-input_S7xtkk" type="digit" value="{{rate}}" bindinput="bindinput_rate" />
+</view>
+<button class="wx-button_fkxn3k btn btn-8" data-c_e_id="wx_button_8fec7c7e" hover-class="button-hover" size="mini" type="primary" bindtap="onCompute" disabled="{{compute_disable}}">
+    立即计算
+</button>
+<button class="wx-button_fkxn3k btn btn-8 reset_btn" data-c_e_id="wx_button_8fec7c7e" hover-class="button-hover" size="mini" type="primary" bindtap="onReset">
+    重置
+</button>
+<view class="c-minheight wx-view_9cGvp4" data-c_e_id="wx_view_31aabee2">
+  <view class="wx-view_7YsrZs" data-c_e_id="wx_viewe7ff439c">
+    <text class="wx-text_puTHpH res_box1" data-c_e_id="wx_textbadf0d9d">贷款总额：</text>
+    <text class="c-block wx-text_puTHpH res_box2" data-c_e_id="wx_text401c7dd3">{{res_amount}}</text>
+    <text class="c-block wx-text_puTHpH res_box3" data-c_e_id="wx_texte9947d76">元</text>
+  </view>
+  <view class="wx-view_7YsrZs" data-c_e_id="wx_viewe7ff439c">
+    <text class="wx-text_puTHpH res_box1" data-c_e_id="wx_textbadf0d9d">还款月数：</text>
+    <text class="c-block wx-text_puTHpH res_box2" data-c_e_id="wx_text401c7dd3">{{res_term}}</text>
+    <text class="c-block wx-text_puTHpH res_box3" data-c_e_id="wx_texte9947d76">月</text>
+  </view>
+  <view class="wx-view_7YsrZs" data-c_e_id="wx_viewe7ff439c">
+    <text class="wx-text_puTHpH res_box1" data-c_e_id="wx_textbadf0d9d">{{type_text}}：</text>
+    <text class="c-block wx-text_puTHpH res_box2" data-c_e_id="wx_text401c7dd3">{{res_payment}}</text>
+    <text class="c-block wx-text_puTHpH res_box3" data-c_e_id="wx_texte9947d76">元</text>
+  </view>
+  <view class="wx-view_7YsrZs" data-c_e_id="wx_viewe7ff439c" style="{{step_hide}}">
+    <text class="wx-text_puTHpH res_box1" data-c_e_id="wx_textbadf0d9d">梯度：</text>
+    <text class="c-block wx-text_puTHpH res_box2" data-c_e_id="wx_text401c7dd3">{{res_step}}</text>
+    <text class="c-block wx-text_puTHpH res_box3" data-c_e_id="wx_texte9947d76">元</text>
+  </view>
+  <view class="wx-view_7YsrZs" data-c_e_id="wx_viewe7ff439c">
+    <text class="wx-text_puTHpH res_box1" data-c_e_id="wx_textbadf0d9d">总利息：</text>
+    <text class="c-block wx-text_puTHpH res_box2" data-c_e_id="wx_text401c7dd3">{{res_interest}}</text>
+    <text class="c-block wx-text_puTHpH res_box3" data-c_e_id="wx_texte9947d76">元</text>
+  </view>
+  <view class="wx-view_7YsrZs" data-c_e_id="wx_viewe7ff439c">
+    <text class="wx-text_puTHpH res_box1" data-c_e_id="wx_textbadf0d9d">本息合计：</text>
+    <text class="c-block wx-text_puTHpH res_box2" data-c_e_id="wx_text401c7dd3">{{res_total}}</text>
+    <text class="c-block wx-text_puTHpH res_box3" data-c_e_id="wx_texte9947d76">元</text>
+  </view>
+</view>
+<text class="show_btn" bindtap="show_detail" style="{{detail_hide}}">查看详情</text>
+<view class="c-minheight wx-view_90eM4X" data-c_e_id="wx_view_af8cceeb" style="{{res_hide}}">
+  <view class="wx-view_7YsrZs" data-c_e_id="wx_view5d744246">
+    <text class="wx-text_puTHpH res_box3" data-c_e_id="wx_text1c1574b3">期数</text>
+    <text class="wx-text_puTHpH res_box1" data-c_e_id="wx_text1c1574b3">利息</text>
+    <text class="c-block wx-text_puTHpH res_box1" data-c_e_id="wx_textb2c35f6b">{{detail_text}}</text>
+    <text class="c-block wx-text_puTHpH res_box1" data-c_e_id="wx_text0a635689">余额</text>
+  </view>
+  <view class="wx-view_7YsrZs" data-c_e_id="wx_view5d744246" wx:for="{{reslist}}" wx:key="debx">
+    <text class="wx-text_puTHpH res_box3" data-c_e_id="wx_text1c1574b3">{{item.term}}</text>
+    <text class="wx-text_puTHpH res_box1" data-c_e_id="wx_text1c1574b3">{{item.interest}}元</text>
+    <text class="c-block wx-text_puTHpH res_box1" data-c_e_id="wx_textb2c35f6b">{{item.payment}}元</text>
+    <text class="c-block wx-text_puTHpH res_box1" data-c_e_id="wx_text0a635689">{{item.balance}}元</text>
+  </view>
+</view>
+<view class="block"></view>
